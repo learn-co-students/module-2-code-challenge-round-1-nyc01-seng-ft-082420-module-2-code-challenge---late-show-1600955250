@@ -12,3 +12,6 @@
 </ul>
 
 <strong>Average Rating:</strong><br>
+<% @episode.appearences.each do |app| %>
+    <%= app.rating %>
+<% end %>
