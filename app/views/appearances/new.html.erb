@@ -1,5 +1,18 @@
 <h3> Appearance Form </h3>
 
+<%= if @appearance.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      There were <%=@appearance.count%> error(s) found:
+    </h2>
+
+    <ul> <% @appearance.errors.full_messages.each do |msg| %>
+      <li> <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+
+
 <%= form_for @appearance do |f| %>
   <%= f.label :guest_id %>
   <%= f.collection_select(:guest_id, Guest.all, :id, :name) %>
