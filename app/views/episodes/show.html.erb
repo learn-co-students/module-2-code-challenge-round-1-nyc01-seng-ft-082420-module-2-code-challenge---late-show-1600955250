@@ -1,5 +1,7 @@
 <h1><%= @episode.date %></h1>
 
+<h4>Average Rating: <%= @episode.avg_rating %> </h4>
+
 <h4>Guests:</h4>
 <ul>
     <% @episode.guests.each do |guest|%>
