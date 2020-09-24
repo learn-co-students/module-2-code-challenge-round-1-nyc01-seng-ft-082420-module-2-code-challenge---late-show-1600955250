@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Appearence.destroy_all
 Guest.destroy_all
+Episode.destroy_all
 
 require 'csv'
 
@@ -25,3 +26,6 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+20.times do
+  Appearence.create(episode: Episode.all.sample, guest: Guest.all.sample, rating: rand(0..4))
+end
