@@ -1,0 +1,12 @@
+<h1>Episode Show page</h1>
+
+Date: <%= @episode.date %>
+<%= @episode.guests.each do |guest| %>
+<%= link_ to guest.name , guest_path(guest)%>
+<%end  %>
+
+###not pulling seeds in to fill information ####
+
+
+
+
