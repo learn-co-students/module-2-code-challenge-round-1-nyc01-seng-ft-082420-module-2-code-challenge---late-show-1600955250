@@ -6,7 +6,7 @@ class AppearancesController < ApplicationController
     end
 
     def create 
-        appearance = Appearace.create(appearance_params)
+        appearance = Appearance.create(appearance_params)
         if appearance.valid?
         redirect_to episode_path(appearance.episode)
         else
