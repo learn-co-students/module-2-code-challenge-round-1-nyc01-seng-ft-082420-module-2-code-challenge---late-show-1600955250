@@ -3,6 +3,6 @@
 <br>
 <ul>
     <% @guest.appearances.each do |appearance| %>
-        <li><%=   %></li>
+        <li> Date: <% = appearance.episodes.date %> || Rating: <%= appearance.rating%> </li>
     <% end %>
 </ul>

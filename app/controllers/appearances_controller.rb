@@ -5,6 +5,7 @@ class AppearancesController < ApplicationController
 end
 
     def show
+        @appearance = Appearance.find(params[:id])
     end
 
     def new
@@ -13,16 +14,19 @@ end
 
     def create
         appearance = Appearance.create(appearance_params)
-        # validations here
-        redirect_to episode_path(appearance.episode)
-            # trying to redirect this to episode path, specifying this is
-                #the appearance that belongs to this episode
+
+        if appearance.valid?
+            redirect_to episode_path(appearance.episode)
+        else 
+            flash [:my_errors] = appearance.errors.full_messages
+            redirect_to new_appearance_path
+        end
     end
 
-    private
+private
 
-        def appearance_params
+    def appearance_params
         params.require(:appearance).permit!
-        end
+    end
 
 end
