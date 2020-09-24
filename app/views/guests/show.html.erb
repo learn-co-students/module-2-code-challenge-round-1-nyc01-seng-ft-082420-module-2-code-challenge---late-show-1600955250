@@ -1,0 +1,12 @@
+<h1> Guest Page </h1>
+
+<h3><%=@guest.name%></h3>
+
+<% @guest.appearances.sort_by {|app| app.rating}.each do |app|%>
+<%= app.episode.date%>
+<li><%= link_to "Episode Page", episode_path(app.episode)%></li>
+<li> Appearance Rating : <%= app.rating%></li><br>
+<%end%>
+
+<!-- My dates are sorting but they are sorting from lowest rating at the top instead of highest rating at the top. ughhhh!>
+

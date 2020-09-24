@@ -1,0 +1,11 @@
+<h1> Episode Information </h1>
+
+<h3>Episode Air Date : <%= @episode.date%></h3>
+<h3>Average Appearance Rating : <%= @episode.average_rating%></h3>
+
+<%@episode.appearances.each do |app|%>
+<li><%= app.guest.name%></li>
+<%# <li><%= app.rating%>
+<li><%= link_to "Guest Page", guest_path(app.guest)%></li><br><br>
+</ul>
+<% end %>
