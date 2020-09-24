@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Guest.destroy_all
+Episode.destroy_all
+Appearance.destroy_all
 
 require 'csv'
 
@@ -25,3 +27,8 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+Appearance.create(guest_id: Guest.first.id, episode_id: Episode.first.id, rating: rand(1..5))
+Appearance.create(guest_id: Guest.second.id, episode_id: Episode.second.id, rating: rand(1..5))
+Appearance.create(guest_id: Guest.third.id, episode_id: Episode.third.id, rating: rand(1..5))
+Appearance.create(guest_id: Guest.fourth.id, episode_id: Episode.fourth.id, rating: rand(1..5))
+Appearance.create(guest_id: Guest.fifth.id, episode_id: Episode.fifth.id, rating: rand(1..5))
