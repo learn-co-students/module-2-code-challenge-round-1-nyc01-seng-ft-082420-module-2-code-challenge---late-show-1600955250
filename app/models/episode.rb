@@ -7,7 +7,9 @@ class Episode < ApplicationRecord
     end
 
     def average_rating
-        total_ratings = self.appearances.map {|appearance| appearance.rating}.sum
-        total_ratings / self.appearances.length
+        ratings = self.appearances.map {|appearance| appearance.rating}
+        total_ratings = ratings.sum
+        average = total_ratings / self.appearances.length
+        average.to_f
     end
 end
