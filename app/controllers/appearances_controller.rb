@@ -4,6 +4,9 @@ class AppearancesController < ApplicationController
         @guest = Guest.all
         @episode = Episode.all
     end
-    #def create
-    #end
+    def create
+        appearances_params = params.require(:appearance).permit(:guest_id, :episode_id, :rating)
+        @appearance = Appearance.create(appearances_params)
+        redirect_to new_appearances_path
+    end
 end
