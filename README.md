@@ -72,9 +72,9 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
-- Guest can appear on many episodes
-- Episode can have multiple guests
-- Appearance stores a numeric rating
+✅- Guest can appear on many episodes
+✅- Episode can have multiple guests
+✅- Appearance stores a numeric rating
 
 ### 2. New Appearance Form
 
