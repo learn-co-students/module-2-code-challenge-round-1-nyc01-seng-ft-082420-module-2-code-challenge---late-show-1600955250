@@ -1,4 +1,4 @@
 class Appearance < ApplicationRecord
-  belongs_to :Guest
-  belongs_to :Episode
+  belongs_to :guest
+  belongs_to :episode
 end

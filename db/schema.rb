@@ -14,12 +14,12 @@ ActiveRecord::Schema.define(version: 20200924140522) do
 
   create_table "appearances", force: :cascade do |t|
     t.integer "rating"
-    t.integer "Guest_id"
-    t.integer "Episode_id"
+    t.integer "guest_id"
+    t.integer "episode_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Episode_id"], name: "index_appearances_on_Episode_id"
-    t.index ["Guest_id"], name: "index_appearances_on_Guest_id"
+    t.index ["episode_id"], name: "index_appearances_on_episode_id"
+    t.index ["guest_id"], name: "index_appearances_on_guest_id"
   end
 
   create_table "episodes", force: :cascade do |t|

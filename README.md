@@ -80,10 +80,10 @@ To log that a specific Guest appeared on a certain Episode, we need to create th
 
 A user can fill out a form to create a new Appearance. They can:
 
-- Choose an existing guest from a select dropdown
-- Choose an existing episode from a select dropdown
-- Enter a numeric rating
-- Submit the form
+✅- Choose an existing guest from a select dropdown
+✅- Choose an existing episode from a select dropdown
+✅- Enter a numeric rating
+✅- Submit the form
 
 After submitting the form, the user should be redirected to the selected episode's show page.
 
@@ -91,9 +91,9 @@ After submitting the form, the user should be redirected to the selected episode
 
 On the episode show page, a user should see:
 
-- Episode date
-- A list of the guests who were on that episode
-- Each guest's name should link to the Guest Show page
+✅- Episode date
+✅- A list of the guests who were on that episode
+✅- Each guest's name should link to the Guest Show page
 
 ### 4. Guest Show Page Episode links
 

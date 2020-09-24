@@ -1,0 +1,6 @@
+<h1>Episode <%= @episode.number %> - <%= @episode.date.strftime("%B %d, %Y") %></h1>
+<% @episode.appearances.each do |appearance| %>
+<ul>
+    <li><%= link_to appearance.guest.name, guest_path(appearance.guest) %>, rating: <%= appearance.rating %></li>
+</ul>
+<% end %>
