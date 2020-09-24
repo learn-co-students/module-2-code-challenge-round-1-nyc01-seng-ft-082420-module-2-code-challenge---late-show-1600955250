@@ -4,3 +4,8 @@
     <li><%= link_to appearance.guest.name, guest_path(appearance.guest) %>, rating: <%= appearance.rating %></li>
 </ul>
 <% end %>
+<% if @episode.appearances.count == 0 %>
+    <h3>Average Rating: 0</h3>
+ <% else %>
+    <h3>Average Rating: <%= @episode.average_rating %></h3> 
+    <% end %>
