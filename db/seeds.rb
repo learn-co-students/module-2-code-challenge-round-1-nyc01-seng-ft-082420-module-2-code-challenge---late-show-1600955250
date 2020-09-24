@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Appearance.destroy_all
 Guest.destroy_all
+Episode.destroy_all
 
 require 'csv'
 
@@ -20,8 +22,14 @@ end
 
 date = Date.parse('2015-09-08')
 
-(1..40).each do |num|
-  Episode.create(date: date, number: num)
-  date = date.next
-end
+10.times {Guest.create(name: Faker::Artist.name, occupation: Faker::Job.title)}
+
+10.times {Episode.create(date: Faker::Date.between(from: '2014-09-23', to: '2014-09-25'), number: rand(1..500))}
+
+20.times {Appearance.create(guest_id: Guest.all.sample.id, episode_id: Episode.all.sample.id)}
+
+# (1..40).each do |num|
+#   Episode.create(date: date, number: num)
+#   date = date.next
+# end
 

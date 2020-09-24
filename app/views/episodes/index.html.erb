@@ -1,7 +1,5 @@
 <h1>All Episodes</h1>
 
-<ul>
-  <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
-  <% end %>
-</ul>
+<% @episodes.each do |episode| %>
+    <h3><%= link_to episode.number, episode_path(episode) %></h3>
+    <% end %>
