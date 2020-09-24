@@ -3,4 +3,8 @@ class Appearance < ApplicationRecord
   belongs_to :episode
   validates :rating, numericality: {greater_than: 0, less_than: 6}
   validates_uniqueness_of :episode, scope: :guest
+
+  def self.sort_rating
+    self.all.sort { |a, b| b.rating <=> a.rating }
+  end
 end
