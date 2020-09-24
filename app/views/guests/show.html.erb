@@ -1,0 +1,9 @@
+<h1><%=@guest.name%></h1>
+<h2>Occupation: <%=@guest.occupation%></h2>
+
+<h3>Appeared in episodes:</h3>
+<ul>
+    <% @guest.ordered_apps.each do |app| %>
+        <li><%=link_to app.episode.date, episode_path(app.episode)%> (Rating: <%=app.rating%>)</li>
+    <% end %>
+</ul>
