@@ -8,3 +8,5 @@
         <li><%= link_to guest.name, guest_path(guest) %></li>
     <% end %>
 </ul>
+
+<%= button_to "Add an Appearance", new_appearance_path, method: "get" %>
