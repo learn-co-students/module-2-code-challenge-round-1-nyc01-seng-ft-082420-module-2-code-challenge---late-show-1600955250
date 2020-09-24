@@ -6,4 +6,5 @@ class Episode < ApplicationRecord
         total_ratings = self.appearances.map {|appearance| appearance.rating }.sum
         average_ratings = total_ratings / self.appearances.count
     end
+
 end

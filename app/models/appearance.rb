@@ -7,4 +7,5 @@ class Appearance < ApplicationRecord
   def self.sort_rating
     self.all.sort { |a, b| b.rating <=> a.rating }
   end
+
 end
