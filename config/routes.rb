@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "/appearances", to: "appearances#index", as: "appearances"
   get "/appearances/new", to: "appearances#new", as: "new_appearances"
   post "/appearances", to: "appearances#create"
+  get "/episodes/:id", to: "episodes#show"
+
 end
