@@ -2,7 +2,7 @@
 <p>Guest Name: <%= @guest.name %></p>
 
 
-<h5> Episodes This Guest Has Appeared On</h5>
+<h5> Episodes This Guest Has Appeared On </h5>
 <ul>
 <% @guest.episodes.each do |episode| %>
     <li><%= episode.date %></li>
@@ -11,4 +11,4 @@
     <% end %>
 </ul>
 
-<!-- episode.appearances brings the object of appearance - I need to get the rating but .rating is undefeind -->
+<!-- episode.appearances brings the object of appearance - I need to get the rating but episode.appearances.rating is undefind -->
