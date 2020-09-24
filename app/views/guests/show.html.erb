@@ -1,0 +1,4 @@
+<h3><%= @guest.name %></h3>
+<% @guest.episodes.uniq.each do |episode| %>
+  <%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")} Rating:#{episode.average_score}" , episode_path(episode) %><br/>
+<% end %>
