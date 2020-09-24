@@ -1,0 +1,19 @@
+<h1> Create Appearance </h1> 
+<% if flash[:my_errors]  %>
+<% flash[:my_errors].each do |error|  %>
+<p><%= error %></p>
+<% end  %>
+<% end  %>
+<%# THIS IS FOR VALIDATION #5 %>
+
+
+<%= form_for @appearance do |f| %>
+<%= f.label :guest_id %>
+<%= f.collection_select :guest_id, @guests, :id, :name %>
+<%= f.collection_select :episode_id, @episode, :id, :number %>
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+<%= f.submit %>
+<% end  %>
+
+<%# #THIS WOULD COMPLETE DELIV 2 %>
