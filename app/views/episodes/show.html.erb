@@ -1,0 +1,12 @@
+<h3><%= @episode.date %></h3>
+<p>Scent: <%= @episode.number %></p>
+
+<ul>
+<% @episode.guests.each do |guess| %>
+    <li>Guess: <%=link_to guess.name, guest_path(guess) %></li>
+  <% end %>
+</ul>
+
+<h3>average rating</h3
+
+<p><%= @episode.avg_rating %></p>

@@ -1,0 +1,10 @@
+<h1>guess</h1>
+
+<h3><%= @guest.name %></h3>
+<p>Scent: <%= @guest.occupation %></p>
+
+<ul>
+<% @guest.episodes.each do |epi| %>
+    <li><%=link_to "#{epi.number} --#{epi.date}", episode_path(epi) %></li>
+  <% end %>
+</ul>
