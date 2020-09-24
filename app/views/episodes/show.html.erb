@@ -1,0 +1,11 @@
+<h1> Episode Show Page </h1> 
+
+
+<p> Date <%=  @episode.date  %></p>
+
+<% @episode.guests.each do |guest|  %>
+<p> guest name<%= link_to guest.name, guest_path(guest) %> </p> 
+<% end  %>
+
+<%# THIS WOULD COMPLETE DELIV 3  %>
+<p>
