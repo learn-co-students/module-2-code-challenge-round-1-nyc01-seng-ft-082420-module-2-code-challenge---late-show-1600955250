@@ -1,0 +1,24 @@
+<%= form_for @appearance do |f| %>
+<% if @appearance.errors.any? %>
+  <ul>
+    <% @appearance.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<div class="field_with_error">
+  <%= f.label :guest %>
+  <%= collection_select :appearance, :guest_id, Guest.all, :id, :name %>
+</div>
+<div class="field_with_error">
+  <%= f.label :episode %>
+  <%= collection_select :appearance, :episode_id, Episode.all, :id, :date %>
+</div>
+<div class="field_with_error">
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+</div>
+<div class="submit">
+    <%= f.submit %>
+</div>
+<% end %>
