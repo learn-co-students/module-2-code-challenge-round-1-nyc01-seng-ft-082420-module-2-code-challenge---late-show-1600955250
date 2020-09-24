@@ -1,6 +1,10 @@
 <h1><%= @guest.name %></h1>
-<h2><%= @guest.occupation %></h2>
+<br>
+<h2>Working as: <%= @guest.occupation %></h2>
+<br>
 <p>Appearances on:</p>
-<ul><% @guest.appearances.sort_rating.each do |appearance| %>
-<li>Date: <%=link_to appearance.episode.date, episode_path(appearance.episode) %>, Rating: <%= appearance.rating %></li>
-<% end %></ul>
+<ul>
+    <% @guest.appearances.sort_rating.each do |appearance| %>
+        <li>Date: <%=link_to appearance.episode.date, episode_path(appearance.episode) %>, Rating: <%= appearance.rating %></li>
+    <% end %>
+</ul>
