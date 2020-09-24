@@ -9,7 +9,7 @@ class AppearancesController < ApplicationController
         if appearance.valid?
             redirect_to episode_path(appearance.episode)
         else
-            flash[:appearance_errors] = appearance.errorsfull_messages
+            flash[:appearance_errors] = appearance.errors.full_messages
             redirect_to new_appearance_path
         end
     end
