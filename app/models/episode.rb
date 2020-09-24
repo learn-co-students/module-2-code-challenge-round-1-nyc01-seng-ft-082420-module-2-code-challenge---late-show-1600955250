@@ -5,4 +5,8 @@ class Episode < ApplicationRecord
     def show_rating
         self.appearances.map{|a| a.rating}.join 
     end
+
+    def average_rating
+        self.appearances.map{|a| a.rating}.sum / self.appearances.length
+    end
 end
