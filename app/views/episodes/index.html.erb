@@ -1,11 +1,5 @@
 <h1>All Episodes</h1>
-<ul>
-  <% if flash[:errors] %>
-    <% flash[:errors].each do |error| %>
-      <%= error %>
-    <% end %>
-  <% end %>
-</ul>
+
 <ul>
   <% @episodes.each do |episode| %>
     <li><%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}", episode_path(episode)%></li>
