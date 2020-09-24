@@ -34,6 +34,7 @@ There are three models in the domain: Guest, Episode, and Appearance.
 
 Guests and Episodes 
 have a many to many relationship 
+
 through Appearances. 
 *** JOIN ***
 
@@ -73,6 +74,7 @@ Guests
 | created_at  | DateTime  |
 | updated_at  | DateTime  |
 
+
 ### Model Methods and Validations
 
 - None
@@ -81,6 +83,10 @@ Guests
 
 - Episodes index
 - Guests index
+
+
+
+
 
 
 
@@ -96,7 +102,9 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ### 1. Appearance Model
 
-To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
+To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. 
+
+**Make the necessary updates to the schema and models** so that:
 
 - Guest can appear on many episodes
 - Episode can have multiple guests
