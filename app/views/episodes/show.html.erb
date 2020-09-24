@@ -1,0 +1,7 @@
+<h1>Episode#show</h1>
+
+<%= @episode.date %>
+<br>
+<%= @episode.number %>
+<br>
+<%= link_to @episode.guests.name, guest_path(@episode.guests)%>
