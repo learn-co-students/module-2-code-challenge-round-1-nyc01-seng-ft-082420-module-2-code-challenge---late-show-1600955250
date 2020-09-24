@@ -1,5 +1,7 @@
 # Rails Code Challenge - Late Show
 
+Alex Sahli
+
 For this assessment, you'll be working with Late Night TV show domain.
 
 In this repo, there is a Rails application with some features built out. Your job is to extend this code to add the functionality described in the deliverables below.
