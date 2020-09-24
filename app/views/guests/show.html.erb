@@ -1,0 +1,17 @@
+<h1>Guest</h1>
+
+<h3> <%= @guest.name %> </h3>
+
+<% if @guest.appearances %>
+  <ul>
+    <h4>Episodes:</h4>
+    <% @guest.appearances.order('rating desc').each do |a|%>
+      <li> 
+        <%= link_to a.episode.date, episode_path(a.episode) %> 
+        <p>Rating: <%= a.rating %> </p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+

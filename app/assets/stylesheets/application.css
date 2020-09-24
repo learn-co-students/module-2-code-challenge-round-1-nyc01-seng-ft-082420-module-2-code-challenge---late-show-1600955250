@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   font-family: 'Courier New', Courier, monospace;
+   list-style: none;
+ }
+ body {
+   margin: 5%;
+ }
