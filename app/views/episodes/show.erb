@@ -1,0 +1,6 @@
+<h1>Episode Show</h1>
+<ul>
+<%@episode.appearances.each do |a|%>
+<li><%=link_to a.guest.name, guest_path(a.guest)%>
+<%end%>
+</ul>
