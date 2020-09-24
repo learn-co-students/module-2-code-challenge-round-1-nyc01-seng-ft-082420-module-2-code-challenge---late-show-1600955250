@@ -1,0 +1,20 @@
+<h2>Log an Appearance</h2>
+
+<div>
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+            <%# I know inline style is not best practice - this is just for funsies%>
+            <p style="color:red"><%= error %></p>
+        <% end %>
+    <% end %>
+</div>
+
+<%= form_for @appearance do |f| %>
+  <%=f.label "Pick a guest"%>
+  <%=f.collection_select :guest_id, Guest.all, :id, :name%><br>
+  <%=f.label "Pick an episode date"%>
+  <%=f.collection_select :episode_id, Episode.all, :id, :date%><br>
+  <%=f.label "Enter a rating"%>
+  <%=f.number_field :rating%><br>
+  <%=f.submit "Enter"%>
+<% end %>
