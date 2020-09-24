@@ -1,0 +1,12 @@
+<h1> Episode Number <%= @episode.number%> </h1>
+<hr>
+
+<h3> All Guests for this Episode: </h3>
+
+<ul>
+<% @episode.guests.each do |g| %>
+    <li> <%= link_to g.name, guest_path(g) %> </li>
+    
+<%end%>
+
+</ul>
